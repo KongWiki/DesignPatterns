@@ -14,6 +14,8 @@ public class Main {
         bookShelf.appendBook(new Book("Bible"));
         bookShelf.appendBook(new Book("Cinderella"));
         bookShelf.appendBook(new Book("Gone with wind"));
+        bookShelf.appendBook(new Book("白牙"));
+        bookShelf.appendBook(new Book("如何成为一名研究生"));
         MyIterator it = (MyIterator) bookShelf.iterator();
         while ((it.hasNext())){
             Book book = (Book) it.next();
