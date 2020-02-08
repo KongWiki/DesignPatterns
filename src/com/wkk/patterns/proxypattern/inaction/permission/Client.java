@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction;
+package com.wkk.patterns.proxypattern.inaction.permission;
 
 /**
  * @Time: 20-2-8上午11:07
@@ -19,7 +19,6 @@ public class Client {
         proxy.viewNote();
         proxy.publishNote();
         proxy.modifyNode();
-
 
     }
 }
