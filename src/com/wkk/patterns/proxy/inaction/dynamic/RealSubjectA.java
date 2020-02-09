@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction.dynamic;
+package com.wkk.patterns.proxy.inaction.dynamic;
 
 /**
  * @Time: 20-2-8下午2:43
@@ -9,5 +9,10 @@ public class RealSubjectA implements AbstractSubject {
     @Override
     public void request() {
         System.out.println("主题A");
+    }
+
+    @Override
+    public void anotherRequest() {
+        System.out.println("另一个请求I");
     }
 }

@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction.calculator;
+package com.wkk.patterns.proxy.inaction.calculator;
 
 /**
  * @Time: 20-2-8下午1:43

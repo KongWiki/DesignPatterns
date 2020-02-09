@@ -2,7 +2,7 @@
 
 ## TODO
 
-* [ ] 单例模式(Singleton Pattern)
+* [x] 单例模式
 * [ ] 原型模式
 * [ ] 工厂模式
 * [ ] 适配器模式
@@ -13,7 +13,7 @@
 * [ ] 观察者模式
 * [ ] 命令模式
 
-## Iterator模式
+## 迭代模式(Iterator Pattern)
 
 ![image](https://raw.githubusercontent.com/KongWiki/cloudImg/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-iteratorsII.png) 
 
@@ -35,7 +35,7 @@
 
 
 
-## 代理模式
+## 代理模式(Proxy Pattern)
 
 ![](https://raw.githubusercontent.com/KongWiki/cloudImg/master/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.png)
 
@@ -265,7 +265,9 @@
 
 动态代理的角色和静态代理的一样. 主要的区别是, 静态代理中, 代理类是我们提前写好的.与具体实现类是对应的.动态代理的典型应用为Spring AOP .
 
-#### **基于接口动态代理实现**
+#### **基于接口动态代理实现 --->  JDK动态代理**
+
+JDK动态代理主要涉及两个类：`java.lang.reflect.Proxy` 和 `java.lang.reflect.InvocationHandler`
 
 1. 编写主题
 
@@ -325,11 +327,67 @@
    proxy1.request();
    ```
 
-#### **基于类的动态代理实现**
+#### **基于类的动态代理实现 ---> CGLIB动态代理**
 
 
 
+## 单例模式(Singleton Pattern)
 
+```java
+public class Singleton{
+    private static Singleton instance = null;
+    
+    private Singleton(){
+        
+    }
+    
+    public static Singleton getInstance(){
+        if(instance == null){
+            instance = new new Singleton();
+        }
+        return instance;
+    }
+    
+}
+```
+
+###  模式应用
+
+1. java.lang.Runtime
+2. Spring中获取某个类的实例, 默认使用的是单例模式(scope="singleton")
+
+### 拓展
+
+1. 饿汉式单例类
+
+   ```java
+   public class Singleton{
+       private static Singleton instnce = new singleton();
+       ......
+       
+   }
+   ```
+
+   被加载的时候, 静态变量instance会被初始化
+
+2. 懒汉式单例类
+
+   ```java
+   public class Singleton{
+       private static Singleton instance = null;
+       ......
+       synchronized public static Singleton getInstance(){
+           if(instance == null){
+               this.instance  = new singleton();
+           }
+           return instance;
+       }
+   }
+   ```
+
+   在第一被引用的时候, 将自己实例化.
+
+   
 
 ## reference 
 

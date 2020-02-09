@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction.dynamic;
+package com.wkk.patterns.proxy.inaction.dynamic;
 
 /**
  * @Time: 20-2-8下午2:42
@@ -7,4 +7,5 @@ package com.wkk.patterns.proxypattern.inaction.dynamic;
  */
 public interface AbstractSubject {
     void request();
+    void anotherRequest();
 }

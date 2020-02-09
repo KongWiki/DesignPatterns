@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction.dynamic;
+package com.wkk.patterns.proxy.inaction.dynamic;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -40,6 +40,7 @@ public class DynamicProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         preRequest();
+        // 反射中 调用方法
         Object result = method.invoke(object, args);
         postResques();
         return result;

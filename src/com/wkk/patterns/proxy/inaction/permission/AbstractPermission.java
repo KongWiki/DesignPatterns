@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction.permission;
+package com.wkk.patterns.proxy.inaction.permission;
 
 /**
  * @Time: 20-2-8上午11:06

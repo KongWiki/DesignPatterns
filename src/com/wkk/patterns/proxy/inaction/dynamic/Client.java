@@ -1,10 +1,4 @@
-package com.wkk.patterns.proxypattern.inaction.dynamic;
-
-import com.sun.corba.se.spi.presentation.rmi.DynamicStub;
-
-import javax.swing.*;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Proxy;
+package com.wkk.patterns.proxy.inaction.dynamic;
 
 /**
  * @Time: 20-2-8下午3:11
@@ -20,8 +14,9 @@ public class Client {
         // 注入需要的实现类
         proxy.setObject(realSubjectB);
         // 获取相应主题的动态代理
-        AbstractSubject proxy1 = (AbstractSubject) proxy.getProxy();
-        proxy1.request();
+        AbstractSubject absProxy = (AbstractSubject) proxy.getProxy();
+        absProxy.request();
+        absProxy.anotherRequest();
 
     }
 }

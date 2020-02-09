@@ -1,4 +1,4 @@
-package com.wkk.patterns.proxypattern;
+package com.wkk.patterns.proxy;
 
 /**
  * @Time: 20-2-8上午10:06
