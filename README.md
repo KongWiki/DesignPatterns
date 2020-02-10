@@ -387,7 +387,10 @@ public class Singleton{
 
    在第一被引用的时候, 将自己实例化.
 
-   
+
+## 工厂模式(Factory Pattern)
+
+
 
 ## reference 
 
