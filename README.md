@@ -58,7 +58,7 @@
 1. Subject接口
 
    ```java
-   package com.wkk.patterns.proxypattern;
+   package main.com.wkk.design.patterns.proxypattern;
    
    /**
     * @Time: 20-2-8上午10:06
@@ -76,7 +76,7 @@
 2. 真实实现类
 
    ```java
-   package com.wkk.patterns.proxypattern;
+   package main.com.wkk.design.patterns.proxypattern;
    
    /**
     * @Time: 20-2-8上午10:06
@@ -97,7 +97,7 @@
 3. 代理类
 
    ```java
-   package com.wkk.patterns.proxypattern;
+   package main.com.wkk.design.patterns.proxypattern;
    
    /**
     * @Time: 20-2-8上午10:06
@@ -137,7 +137,7 @@
 1. AbstractPermission
 
    ```java
-   package com.wkk.patterns.proxypattern.inaction.permission;
+   package main.com.wkk.design.patterns.proxypattern.inaction.permission;
    
    /**
     * @Time: 20-2-8上午11:06
@@ -165,7 +165,7 @@
 2. RealPermission
 
    ```java
-   package com.wkk.patterns.proxypattern.inaction.permission;
+   package main.com.wkk.design.patterns.proxypattern.inaction.permission;
    
    /**
     * @Time: 20-2-8上午11:06
@@ -205,7 +205,7 @@
 3. PermissionProxy
 
    ```java
-   package com.wkk.patterns.proxypattern.inaction.permission;
+   package main.com.wkk.design.patterns.proxypattern.inaction.permission;
    
    /**
     * @Time: 20-2-8上午11:06
@@ -263,13 +263,20 @@
 
 ### 动态代理
 
-动态代理的角色和静态代理的一样. 主要的区别是, 静态代理中, 代理类是我们提前写好的.与具体实现类是对应的.动态代理的典型应用为Spring AOP，同时通过源码可以发现AOP的基本实现原理有以下的几点：
+动态代理的角色和静态代理的一样. 主要的区别是, 静态代理中, 代理类是我们提前写好的.与具体实现类是对应的，但是正式因为这个原因，当类的很多的时候，为每个类添加代理就特别的反人类。
+
+#### 动态代理和静态代理的区别：
+
+- 静态代理在编译时就已经实现，编译完成后代理类是一个实际的class文件
+- 动态代理是在运行时动态生成的，即编译完成后没有实际的class文件，而是在运行时动态生成类字节码，并加载到JVM中
+
+**动态代理特点**：动态代理对象不需要实现接口，但是要求目标对象必须实现接口，否则不能使用动态代理。
+
+动态代理的典型应用为Spring AOP，同时通过源码可以发现AOP的基本实现原理有以下的几点：
 
 - 如果针对接口做代理默认使用的是JDK自带的Proxy+InvocationHandler
 - 如果针对类做代理使用的是Cglib
 - 即使针对接口做代理，也可以将代理方式配置成走Cglib的
-
-
 
 #### **基于接口动态代理实现 --->  JDK动态代理**
 
@@ -335,7 +342,12 @@ JDK动态代理主要涉及两个类：`java.lang.reflect.Proxy` 和 `java.lang.
 
 #### **基于类的动态代理实现 ---> CGLIB动态代理**
 
-这个有点儿绕，**待更吧**
+~~这个有点儿绕，**待更吧**~~
+
+`cglib`和`Java动态代理`的区别
+
+- 使用动态代理的对象必须实现一个或多个接口
+- 使用cglib代理的对象则无需实现接口，达到代理类无侵入。
 
 
 
