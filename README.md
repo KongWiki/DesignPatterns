@@ -15,7 +15,7 @@
 
 ## 迭代模式(Iterator Pattern)
 
-![image](https://raw.githubusercontent.com/KongWiki/cloudImg/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-iteratorsII.png) 
+![设计模式-iteratorsII.png](https://i.loli.net/2020/04/26/HEtPGIcO2lA9Lzo.png) 
 
 #### 相关角色
 
@@ -37,7 +37,7 @@
 
 ## 代理模式(Proxy Pattern)
 
-![](https://raw.githubusercontent.com/KongWiki/cloudImg/master/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.png)
+![代理模式.png](https://i.loli.net/2020/04/26/NruBRfo4e1saSYj.png)
 
 ### 包含角色
 
@@ -49,7 +49,9 @@
 3. 抽象主题角色
    1. 也就代理和真实角色共有的操作, 代理和真实角色都是对抽象主题角色的实现
 
- ![](https://raw.githubusercontent.com/KongWiki/cloudImg/master/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%9E%8B%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
+ ![代理模型示意图.png](https://i.loli.net/2020/04/26/SNVFUvjIpMWfmnA.png)
+
+
 
 
 
@@ -132,7 +134,9 @@
 
 ### 论坛权限控制代理(保护代理)
 
-![](https://raw.githubusercontent.com/KongWiki/cloudImg/master/%E8%AE%BA%E5%9D%9B%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E4%BB%A3%E7%90%86%E7%B1%BB%E5%9B%BE.png)
+![论坛权限控制代理类图.png](https://i.loli.net/2020/04/26/M6NpKDzr1VEnI9T.png)
+
+
 
 1. AbstractPermission
 
