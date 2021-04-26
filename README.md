@@ -12,6 +12,8 @@
 * [x] 迭代器模式
 * [ ] 观察者模式
 * [ ] 命令模式
+* [ ] 策略模式
+* [ ] 模板模式
 
 ## 迭代模式(Iterator Pattern)
 
@@ -436,6 +438,14 @@ public class Singleton{
 ### 简单工厂模式
 
 
+## 策略模式
+目前对策略模式的理解就是属于替代`if/else`的利器。解决的场景，一般是具有同类可替代的行为逻辑算法场景。
+譬如不同类型的交易方式（信用卡、支付宝、微信）、生成唯一ID策略（UUID、雪花算法、DB+Redis、Leaf算法、DB自增）等
+使用策略模式进行封装，提供给外部的使用（不过对于新增内部同类可替代的行为需要自己去实现）
+
+![image-20210426192951497](https://i.loli.net/2021/04/26/hx8rGUCycQpqfIz.png)
+
+
 
 ## reference 
 
@@ -443,6 +453,7 @@ public class Singleton{
 * 设计模式 --- 作者 Erich Gamm，Richard Helm，Ralph Johnson，John Vlissides
 * 维基百科
 * [代理模式原理及实例讲解](https://www.ibm.com/developerworks/cn/java/j-lo-proxy-pattern/index.html)
+* 重学Java设计模式·小傅哥
 
 
 
